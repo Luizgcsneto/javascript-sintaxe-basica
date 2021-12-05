@@ -29,3 +29,21 @@ let array = ['valor1','valor2','valor3','valor4','valor5']
 for(let indice = 0; indice < array.length; indice++){
     console.log('valores do array',array[indice])
 }
+
+let object = {
+    propriedade1: 'propriedade1',
+    propriedade2: 'propriedade2',
+    propriedade3: 'propriedade3',
+    propriedade4: 'propriedade4',
+}
+
+console.table(object)
+console.log('usando o for IN')
+for(let i in object){
+    console.log(i)
+}
+console.log('---------------')
+console.log('usando o for OF')
+for(i of array){
+    console.log(i)
+}
