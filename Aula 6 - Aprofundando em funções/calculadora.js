@@ -8,26 +8,31 @@ function calculadora(){
     function soma(){
         resultado = num1 + num2
         alert(`${num1} + ${num2} = ${resultado}`)
+        novaOperacao()
     }
 
     function subtracao(){
         resultado = num1 - num2
         alert(`${num1} - ${num2} = ${resultado}`)
+        novaOperacao()
     }
 
     function multiplicacao(){
         resultado = num1 * num2
         alert(`${num1} X ${num2} = ${resultado}`)
+        novaOperacao()
     }
 
     function divisao(){
         resultado = num1 / num2
         alert(`${num1} / ${num2} = ${resultado}`)
+        novaOperacao()
     }
 
     function potenciacao(){
         resultado = num1 ** num2
         alert(`${num1} elevado a ${num2}º = ${resultado}`)
+        novaOperacao()
     }
 
     if(operacao === 1){
@@ -44,16 +49,19 @@ function calculadora(){
     else if( operacao === 5){
         potenciacao()
     }
+    
+    function novaOperacao(){
+        let opcao = Number(prompt('deseja fazer uma nova operacao ? \n 1 - Sim \n 2 - Não'))
 
-    let novaOperacao = Number(prompt('deseja fazer uma nova operacao ? \n 1 - Sim \n 2 - Não'))
-
-    if(novaOperacao === 1){
-        calculadora()
-    } else if(novaOperacao === 2){
-        alert('até mais')
-    } else {
-        alert('erro digite uma opção válida')
-    }
+        if(opcao === 1){
+            calculadora()
+        } else if(opcao === 2){
+            alert('até mais')
+        } else {
+            alert('erro digite uma opção válida')
+            novaOperacao()
+        }
+}
 }
 
 calculadora()
